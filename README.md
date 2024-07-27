@@ -1,7 +1,7 @@
-# TikTok Data Analysis Project
+# TikTok Truth Serum: Decrypting Content Chaos
 
 ## Introduction 📋
-This project aims to develop a machine learning model to classify TikTok videos as claims or opinions based on various engagement metrics. The goal is to improve content moderation and ensure compliance with TikTok's terms of service by accurately identifying videos that are more likely to make claims.
+This project aims to develop a machine learning model to classify TikTok videos as claims or opinions based on various engagement metrics. The goal is to improve content moderation and ensure compliance with TikTok's terms of service by accurately identifying videos that are more likely to make claims. This was a part of Google Advanced Data Analytics Capstone Project
 
 ## Problem Statement 😩
 Accurately classifying TikTok videos as claims or opinions is crucial for moderating content and ensuring compliance with the platform's terms of service. This classification helps prioritize videos for review and prevents the spread of misinformation.
