@@ -1,7 +1,3 @@
-Here’s the streamlined README in GitHub markdown format:
-
----
-
 # TikTok Truth Serum: Classifying Content on TikTok
 
 ## Project Overview 📋
@@ -56,4 +52,5 @@ The dataset includes TikTok video metadata such as:
   ![image](https://github.com/user-attachments/assets/9c04cafe-1189-4e82-aac9-4a4e9b5e1a2e)
 ---
 
-This version is formatted specifically for GitHub, with markdown headings, bullet points, and lists to enhance readability and navigation on a GitHub README page.
+author: Myckland Matthew
+email: myckland.matthew@gmail.comn
