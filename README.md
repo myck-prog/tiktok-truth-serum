@@ -1,135 +1,59 @@
-# TikTok Truth Serum: Decrypting Content Chaos
-
-## Introduction 📋
-This project aims to develop a machine learning model to classify TikTok videos as claims or opinions based on various engagement metrics. The goal is to improve content moderation and ensure compliance with TikTok's terms of service by accurately identifying videos that are more likely to make claims. This was a part of Google Advanced Data Analytics Capstone Project
-
-## Problem Statement 😩
-Accurately classifying TikTok videos as claims or opinions is crucial for moderating content and ensuring compliance with the platform's terms of service. This classification helps prioritize videos for review and prevents the spread of misinformation.
-
-## Dataset 🔢
-### Data Sources
-The dataset consists of TikTok video metadata, including view counts, like counts, share counts, and more. The data is sourced from TikTok's internal databases and includes both verified and unverified accounts.
-
-### Data Dictionary
-- `video_id`: Unique identifier for each video
-- `video_duration_sec`: Duration of the video in seconds
-- `video_transcription_text`: Text transcription of the video
-- `verified_status`: Whether the author is verified or not
-- `author_ban_status`: Author's ban status
-- `video_view_count`: Number of views
-- `video_like_count`: Number of likes
-- `video_share_count`: Number of shares
-- `video_download_count`: Number of downloads
-- `video_comment_count`: Number of comments
-
-### Data Cleaning and Preparation
-- **Handling Missing Values**: Imputed missing values in columns like `video_view_count`, `video_like_count`, etc.
-- **Data Type Conversions**: Ensured correct data types for each column.
-- **Feature Engineering**: Created new features such as `likes_per_view`, `comments_per_view`, and `shares_per_view`.
-
-## Methodology 🛠️
-### Data Collection and Loading
-The data was loaded into a Pandas dataframe for analysis. Initial exploration was conducted to understand the size, shape, and composition of the dataset.
-
-### Data Cleaning and Preparation
-- Inspected the data for missing values and outliers.
-- Cleaned and transformed the data to ensure consistency and accuracy.
-
-## Exploratory Data Analysis 🔍
-- **Initial Data Exploration**: Used `head()`, `info()`, and `describe()` to understand the dataset.
-- **Visualizations**: Created histograms, box plots, and scatter plots to visualize distributions and relationships.
-- **Insights**: Identified trends and patterns, such as higher engagement levels for claim videos.
-
-## Feature Engineering 🔧
-- **Transformed Features**: Applied log transformation to skewed features.
-- **Selected Important Features**: Based on EDA, selected features like `video_view_count`, `video_like_count`, and `video_share_count`.
-
-## Model Development 🔩
-### Model Selection
-Tested various models including Random Forest, XGBoost, and Logistic Regression. Selected models based on their performance metrics.
-
-### Model Evaluation
-- **Random Forest**: 
-  - Precision: 69%
-  - Recall: 66%
-  - F1-score: 66%
-- **XGBoost**: 
-  - Precision: 70%
-  - Recall: 68%
-  - F1-score: 68%
-- **Logistic Regression**: 
-  - Precision: 65%
-  - Recall: 62%
-  - F1-score: 63%
-
-### Model Interpretation
-- **Feature Importance**: Key features influencing the predictions included `video_view_count`, `video_like_count`, and `video_share_count`.
-- **Behavioral Insights**: Longer videos and higher engagement metrics were strongly associated with claim videos, indicating that such videos are more likely to contain claims.
-
-## Results and Insights 📊
-- **Summary of Findings**: Claim videos tend to have higher engagement metrics compared to opinion videos.
-- **Actionable Insights**: Prioritize high-engagement videos for review to improve content moderation efficiency.
-
-## Conclusion 💡
-- **Recap**: The project successfully developed a model to classify TikTok videos as claims or opinions, aiding in content moderation.
-- **Recommendations**: Further refine the model with additional data and features, and deploy the model in a production environment for real-time classification.
-
-## Future Work 🧭
-- **Extend the Model**: Incorporate new data and features to enhance model accuracy.
-- **Fine-tune the Model**: Continuously retrain the model with new data.
-- **Enhance the UI**: Improve the user interface for better accessibility and usability.
-
-## Appendices 📑
-### Queries or Code
-- Detailed code and queries used in the analysis are provided in the accompanying Jupyter Notebooks and scripts.
-
-### Additional Charts and Tables
-- Additional visualizations and tables supporting the findings are included in the project documentation.
-  ![image](https://github.com/user-attachments/assets/9c04cafe-1189-4e82-aac9-4a4e9b5e1a2e)
-
+Here’s the streamlined README in GitHub markdown format:
 
 ---
 
-# Executive Summary
+# TikTok Truth Serum: Classifying Content on TikTok
 
-## Project Overview
-The TikTok data team aims to develop a machine learning model to assist in the classification of claims for user submissions. This project involves hypothesis testing, model development, and user engagement analysis to create an effective classification system.
+## Project Overview 📋
+This project develops a **machine learning model** to classify TikTok videos as either **claims** or **opinions** based on engagement metrics. The goal is to improve content moderation and ensure compliance with TikTok's terms of service by identifying videos likely to contain claims, which may need prioritized review. This work is part of the **Google Advanced Data Analytics Capstone Project**.
 
-## Key Insights
-- **Statistical Testing**: Verified accounts tend to have higher video view counts compared to unverified accounts.
-- **Model Performance**: The Random Forest model achieved the highest recall score, making it the best choice for identifying claim videos.
-- **Feature Importance**: `video_view_count`, `video_like_count`, and `video_share_count` were identified as the most important features for predicting claim status.
+## Problem Statement 😩
+Accurately classifying TikTok videos as claims or opinions is essential for moderating content and ensuring compliance with platform guidelines. This classification prioritizes videos for review, reducing the spread of misinformation.
 
-## Model Evaluation
-- **Random Forest**: 
-  - Precision: 69%
-  - Recall: 66%
-  - F1-score: 66%
-- **XGBoost**: 
-  - Precision: 70%
-  - Recall: 68%
-  - F1-score: 68%
-- **Logistic Regression**: 
-  - Precision: 65%
-  - Recall: 62%
-  - F1-score: 63%
+## Dataset 🔢
+The dataset includes TikTok video metadata such as:
+- **Identifiers**: `video_id` (unique video identifier)
+- **Content Features**: `video_duration_sec`, `video_transcription_text`, `verified_status` (author’s verification status)
+- **Engagement Metrics**: `video_view_count`, `video_like_count`, `video_share_count`, `video_download_count`, `video_comment_count`
 
-## Model Interpretation
-- **Feature Importance**: Key features influencing the predictions included `video_view_count`, `video_like_count`, and `video_share_count`.
-- **Behavioral Insights**: Longer videos and higher engagement metrics were strongly associated with claim videos, indicating that such videos are more likely to contain claims.
+### Data Preparation
+- **Handling Missing Values**: Imputed missing values in key columns.
+- **Feature Engineering**: Created new features like `likes_per_view` and `shares_per_view` to enrich the data.
 
-## Results and Insights
+## Methodology 🛠️
+1. **Data Exploration**: Used exploratory data analysis (EDA) techniques, including summary statistics and visualizations, to understand distributions and relationships.
+2. **Feature Transformation**: Applied log transformations to skewed features. Selected important features (`video_view_count`, `video_like_count`, `video_share_count`) based on EDA findings.
+3. **Model Selection and Evaluation**: Tested three models — **Random Forest**, **XGBoost**, and **Logistic Regression** — using metrics like **Precision**, **Recall**, **F1-score**, and **Accuracy**.
+
+### Model Interpretation
+- **Feature Importance**: Key features influencing predictions included `video_view_count`, `video_like_count`, and `video_share_count`.
+- **Behavioral Insights**: Longer videos and higher engagement metrics were strongly associated with claim videos, suggesting that these videos are more likely to contain claims.
+
+## Model Performance 🔩
+- **Random Forest**: Precision 69%, Recall 66%, F1-score 66%
+- **XGBoost**: Precision 70%, Recall 68%, F1-score 68%
+- **Logistic Regression**: Precision 68%, Recall 53%, F1-score 61%, Accuracy 67%
+
+## Results and Insights 📊
+- **Summary of Findings**: Claim videos tend to have higher engagement metrics compared to opinion videos.
 - **Engagement Trends**: Videos with higher view counts and engagement metrics are more likely to be classified as claims.
-- **Actionable Insights**: Implementing this model can help prioritize high-engagement videos for review, improving the efficiency of content moderation on the platform.
+- **Actionable Insights**: Prioritize high-engagement videos for review to improve content moderation efficiency. Implementing this model can help streamline the moderation process on the platform.
 
-## Recommendations
-- **Model Refinement**: Continue to refine the model with additional data and features.
-- **Deployment**: Deploy the model in a production environment to classify videos in real-time.
-- **User Interface Enhancement**: Improve the user interface to make it more accessible and user-friendly.
+## Conclusion 💡
+- **Recap**: The project successfully developed a model to classify TikTok videos as claims or opinions, supporting content moderation.
+- **Recommendations**: Further refine the model with additional data and features, and deploy it in a production environment for real-time classification.
 
-## Next Steps
-1. **Extend the Model**: Incorporate new data and features to enhance model accuracy.
-2. **Monitor Model Performance**: Regularly evaluate the model to ensure it remains effective over time.
-3. **User Training**: Provide training for users to effectively utilize the classification system.
+## Next Steps 🔜
+1. **Model Extension**: Incorporate additional data sources and features to enhance accuracy.
+2. **Performance Monitoring**: Regularly evaluate and update the model to ensure sustained effectiveness.
+3. **User Training**: Equip moderation teams with training to effectively leverage the classification system.
 
---
+## Appendices 📑
+- **Code and Queries**: The complete code and queries are provided in the accompanying Jupyter Notebooks.
+- **Additional Visualizations**: Supplementary charts and tables supporting findings are included in the project documentation.
+### Additional Charts and Tables
+- Additional visualizations and tables supporting the findings are included in the project documentation.
+  ![image](https://github.com/user-attachments/assets/9c04cafe-1189-4e82-aac9-4a4e9b5e1a2e)
+---
+
+This version is formatted specifically for GitHub, with markdown headings, bullet points, and lists to enhance readability and navigation on a GitHub README page.
